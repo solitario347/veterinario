@@ -1,0 +1,20 @@
+/* Estilos para darle personalidad a Animal Care */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto al pasar el mouse por las tarjetas */
+.card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+/* Ajuste para el botón de la API */
+#btn-cambiar-foto {
+    transition: all 0.2s;
+}
+
+#btn-cambiar-foto:active {
+    transform: scale(0.95);
+}
