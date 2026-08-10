@@ -1,6 +1,39 @@
 document.addEventListener("DOMContentLoaded", () => {
     
-    // --- 1. LÓGICA DEL CRUD  ---
+    //BOTON MODO OSCURO / CLARO GLOBAL//
+    const btnTheme = document.getElementById('btn-theme');
+    const temaGuardado = localStorage.getItem('theme');
+
+    if (temaGuardado === 'dark') {
+        document.body.classList.add('dark-mode');
+        if (btnTheme) btnTheme.textContent = '☀️ Modo Claro';
+    }
+
+    if (btnTheme) {
+        btnTheme.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            const esOscuro = document.body.classList.contains('dark-mode');
+
+            btnTheme.textContent = esOscuro ? '☀️ Modo Claro' : '🌙 Modo Oscuro';
+            localStorage.setItem('theme', esOscuro ? 'dark' : 'light');
+        });
+    } 
+    
+    // BUSCADOR DE PACIENTES //
+    const inputBuscarPaciente = document.getElementById('buscar-paciente');
+    if (inputBuscarPaciente) {
+        inputBuscarPaciente.addEventListener('keyup', () => {
+            const termino = inputBuscarPaciente.value.toLowerCase().trim();
+            const filasPacientes = document.querySelectorAll('#tablaPacientes tr');
+
+            filasPacientes.forEach(fila => {
+                const contenidoFila = fila.textContent.toLowerCase();
+                fila.style.display = contenidoFila.includes(termino) ? '' : 'none';
+            });
+        });
+    }
+
+    //LÓGICA DEL CRUD DE PACIENTES//
     const formPaciente = document.getElementById("formPaciente");
     const tablaPacientes = document.getElementById("tablaPacientes");
 
@@ -45,8 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
         mostrarPacientes();
     }
 
-
-    // --- 2. LÓGICA DE LA API ---
+    //LÓGICA DE LA API//
     const imgAnimal = document.getElementById("imagen-animal");
     const btnCambiarFoto = document.getElementById("btn-cambiar-foto");
 

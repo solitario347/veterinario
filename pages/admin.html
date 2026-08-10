@@ -35,7 +35,7 @@
         </div>
     </header>
 
-    <!-- Registro y Control de Pacientes con LocalStorage -->
+    <!-- Registro y Control de Pacientes -->
     <main class="container my-5">
         <h2 class="text-center text-success fw-bold mb-4">Registro de Ingreso de Pacientes</h2>
         
@@ -66,10 +66,17 @@
                 </div>
             </div>
 
-            <!-- Tabla de Consulta -->
+            <!-- Tabla de Consulta con Buscador -->
             <div class="col-md-8">
                 <div class="card shadow-sm p-3">
-                    <h3 class="h5 text-success mb-3">Pacientes en Clínica</h3>
+                    <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+                        <h3 class="h5 text-success m-0">Pacientes en Clínica</h3>
+                        
+                        <div class="w-50">
+                            <input type="text" id="buscar-paciente" class="form-control form-control-sm" placeholder="🔍 Buscar por nombre, especie o motivo...">
+                        </div>
+                    </div>
+                    
                     <div class="table-responsive">
                         <table class="table table-striped align-middle">
                             <thead>
@@ -89,7 +96,6 @@
         </div>
     </main>
 
-    <!-- Pie de página -->
     <footer class="bg-dark text-white text-center py-3 mt-5">
         <p class="m-0">&copy; 2026 Animal Care. Todos los derechos reservados.</p>
     </footer>
