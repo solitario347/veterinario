@@ -1,2 +1,2 @@
-# veterinario
-pagian web para la salud y ayuda de mascotas enfermas y vacunaciones.
+# veterinaria
+PAGINA WEB PARA LA SALUD Y AYUDA DE MASCOTAS NECESITADAS.

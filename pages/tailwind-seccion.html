@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Equipo - Animal Care</title>
+    <link rel="icon" type="image/png" href="../icons/huella.png">
     
     <!-- Bootstrap 5 CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -12,53 +13,71 @@
     <!-- Estilos personalizados -->
     <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body class="bg-gray-100">
+<body class="bg-light">
 
-    <!-- Encabezado con estructura clásica adaptada -->
-    <header class="bg-emerald-600 text-white px-6 py-4 flex justify-between items-center shadow-md">
-        <div>
-            <h1 class="text-xl font-bold m-0">Animal Care</h1>
-            <span class="text-xs text-emerald-200">Sección Tailwind CSS</span>
-        </div>
-        <nav>
-            <ul class="flex gap-4 m-0 p-0 list-none">
-                <li><a href="../index.html" class="text-white hover:underline">Inicio</a></li>
-                <li><a href="servicios.html" class="text-white hover:underline">Servicios</a></li>
-                <li><a href="contacto.html" class="text-white hover:underline">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Contenido Principal construido 100% con Tailwind CSS (Requerimiento del taller) -->
-    <main class="max-w-6xl mx-auto px-4 py-10">
-        <div class="text-center mb-10">
-            <h2 class="text-3xl font-extrabold text-emerald-700">Nuestro Equipo Veterinario</h2>
-            <p class="text-gray-600 mt-2">Profesionales dedicados al cuidado y bienestar de tus mascotas.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Tarjeta 1 -->
-            <div class="bg-white rounded-lg shadow-lg p-6 border border-emerald-100">
-                <h3 class="text-xl font-bold text-emerald-800">Dr. Edgar Pedraza</h3>
-                <span class="text-sm font-semibold text-emerald-600 block mt-1">Especialista en Medicina General y Felinos</span>
-                <p class="text-gray-600 mt-3 text-sm">Con más de 3 años de experiencia, se encarga de la prevención, diagnóstico oportuno y bienestar integral de los gatos y perros.</p>
+    <header class="navbar navbar-expand-lg navbar-dark bg-success px-4 py-3">
+        <div class="container-fluid">
+            <div class="d-flex align-items-center gap-2">
+                <span class="text-2xl">🐾</span>
+                <a class="navbar-brand m-0" href="../index.html">
+                    <h1 class="h3 m-0">Animal Care</h1>
+                    <small class="text-white-50 fs-6">Equipo Veterinario</small>
+                </a>
             </div>
 
-            <!-- Tarjeta 2 -->
-            <div class="bg-white rounded-lg shadow-lg p-6 border border-emerald-100">
-                <h3 class="text-xl font-bold text-emerald-800">Dr. Thomas Cortez</h3>
-                <span class="text-sm font-semibold text-emerald-600 block mt-1">Cirujano y Urgencias Veterinarias</span>
-                <p class="text-gray-600 mt-3 text-sm">Apasionado por la atención crítica y de soporte vital, disponible para salvaguardar la salud de tus mejores amigos en momentos difíciles.</p>
+            <!-- Menú de navegación -->
+            <nav>
+                <ul class="navbar-nav flex-row gap-3">
+                    <li class="nav-item"><a class="nav-link text-white" href="../index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="servicios.html">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link text-white active" href="tailwind-seccion.html">Equipo</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="admin.html">Pacientes</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <div class="text-center mb-5">
+            <span class="text-success fw-semibold tracking-wider text-sm uppercase">Nuestros Especialistas</span>
+            <h2 class="display-5 fw-bold text-success mt-1 mb-2">Equipo Veterinario</h2>
+            <p class="text-muted max-w-xl mx-auto">Profesionales altamente capacitados y dedicados al bienestar, la salud y la felicidad de tus mascotas.</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-5">
+                <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden bg-white">
+                    <div class="overflow-hidden">
+                        <img src="http://googleusercontent.com/image_collection/image_retrieval/6764906722604997944_0" class="card-img-top" alt="Dr. Edgar Pedraza" style="height: 380px; object-fit: cover;">
+                    </div>
+                    <div class="card-body text-center p-4">
+                        <h3 class="h4 card-title text-success fw-bold mb-1">Dr. Edgar Pedraza</h3>
+                        <p class="text-success fw-medium small mb-3">Medicina Preventiva</p>
+                        <p class="card-text text-secondary small leading-relaxed">Especialista en cuidado preventivo y atención integral para perros y gatos con más de 3 años de experiencia brindando amor y salud.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden bg-white">
+                    <div class="overflow-hidden">
+                        <img src="http://googleusercontent.com/image_collection/image_retrieval/6764906722604997944_2" class="card-img-top" alt="Dr. Thomas Cortez" style="height: 380px; object-fit: cover;">
+                    </div>
+                    <div class="card-body text-center p-4">
+                        <h3 class="h4 card-title text-success fw-bold mb-1">Dr. Thomas Cortez</h3>
+                        <p class="text-success fw-medium small mb-3">Cirugía y Urgencias</p>
+                        <p class="card-text text-secondary small leading-relaxed">Cirujano apasionado por el soporte vital y la atención rápida ante cualquier emergencia médica veterinaria 24/7 con máxima dedicación.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
 
-    <!-- Pie de página -->
-    <footer class="bg-gray-900 text-white text-center py-4 mt-10">
-        <p class="m-0 text-sm">&copy; 2026 Animal Care. Todos los derechos reservados.</p>
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p class="m-0">&copy; 2026 Animal Care. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/app.js"></script>
 </body>

@@ -1,20 +1,18 @@
-/* Estilos para darle personalidad a Animal Care */
+:root {
+    --bs-primary: #0284c7;
+    --bs-success: #0284c7;
+    --bs-success-rgb: 2, 132, 199;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f8fb;
+    color: #334155;
     transition: background-color 0.3s ease;
 }
 
-/* Efecto al pasar el mouse por las tarjetas */
 .card:hover {
-    transform: translateY(-5px);
-    transition: transform 0.3s ease;
-}
-
-/* Ajuste para el botón de la API */
-#btn-cambiar-foto {
-    transition: all 0.2s;
-}
-
-#btn-cambiar-foto:active {
-    transform: scale(0.95);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(2, 132, 199, 0.1);
+    transition: all 0.3s ease;
 }

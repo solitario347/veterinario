@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     
-    // --- 1. LÓGICA DEL CRUD (Solo se ejecuta en admin.html) ---
+    // --- 1. LÓGICA DEL CRUD  ---
     const formPaciente = document.getElementById("formPaciente");
     const tablaPacientes = document.getElementById("tablaPacientes");
 
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    // --- 2. LÓGICA DE LA API (Se ejecuta en servicios.html o donde esté la imagen) ---
+    // --- 2. LÓGICA DE LA API ---
     const imgAnimal = document.getElementById("imagen-animal");
     const btnCambiarFoto = document.getElementById("btn-cambiar-foto");
 
@@ -63,7 +63,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Si la imagen existe en la página actual, cargamos la foto y activamos el botón
     if (imgAnimal) {
         cargarFotoAnimal();
     }

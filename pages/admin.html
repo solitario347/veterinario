@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../icons/huella.png">
     <title>Pacientes - Animal Care</title>
     
     <!-- Bootstrap 5 CDN -->
@@ -14,8 +15,10 @@
 </head>
 <body class="bg-light">
 
-    <!-- Encabezado / Navbar -->
     <header class="navbar navbar-expand-lg navbar-dark bg-success px-4">
+        <div class="flex items-center gap-2">
+            <span class="text-2xl">🐾</span>
+        </div>
         <div class="container-fluid">
             <a class="navbar-brand" href="../index.html">
                 <h1 class="h3 m-0">Animal Care</h1>
@@ -32,7 +35,7 @@
         </div>
     </header>
 
-    <!-- Contenido Principal: Registro y Control de Pacientes con LocalStorage -->
+    <!-- Registro y Control de Pacientes con LocalStorage -->
     <main class="container my-5">
         <h2 class="text-center text-success fw-bold mb-4">Registro de Ingreso de Pacientes</h2>
         
@@ -63,7 +66,7 @@
                 </div>
             </div>
 
-            <!-- Tabla de Consulta (CRUD LocalStorage) -->
+            <!-- Tabla de Consulta -->
             <div class="col-md-8">
                 <div class="card shadow-sm p-3">
                     <h3 class="h5 text-success mb-3">Pacientes en Clínica</h3>
@@ -78,7 +81,6 @@
                                 </tr>
                             </thead>
                             <tbody id="tablaPacientes">
-                                <!-- Se llena mediante JavaScript -->
                             </tbody>
                         </table>
                     </div>
