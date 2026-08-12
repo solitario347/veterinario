@@ -15,6 +15,7 @@
 </head>
 <body class="bg-light">
 
+    <!-- Encabezado -->
     <header class="navbar navbar-expand-lg navbar-dark bg-success px-4 py-3">
         <div class="container-fluid">
             <div class="d-flex align-items-center gap-2">
@@ -38,46 +39,102 @@
         </div>
     </header>
 
+    <!-- Contenido Principal -->
     <main class="container my-5">
         <div class="text-center mb-5">
             <span class="text-success fw-semibold tracking-wider text-sm uppercase">Nuestros Especialistas</span>
             <h2 class="display-5 fw-bold text-success mt-1 mb-2">Equipo Veterinario</h2>
-            <p class="text-muted max-w-xl mx-auto">Profesionales altamente capacitados y dedicados al bienestar, la salud y la felicidad de tus mascotas.</p>
+            <p class="text-muted max-w-xl mx-auto mb-4">Profesionales altamente capacitados y dedicados al bienestar, la salud y la felicidad de tus mascotas.</p>
+            
+            <!-- Botón centrado en el medio -->
+            <button class="btn btn-success btn-lg shadow-sm" data-bs-toggle="modal" data-bs-target="#modalVeterinario">
+                + Añadir Nuevo Veterinario
+            </button>
         </div>
 
-        <div class="row g-4 justify-content-center">
+        <!-- Contenedor con ID para las tarjetas -->
+        <div id="contenedor-equipo" class="row g-4 justify-content-center">
+            
+            <!-- Miembro 1 -->
             <div class="col-md-5">
-                <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden bg-white">
+                <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden bg-white d-flex flex-column">
                     <div class="overflow-hidden">
                         <img src="../images/veterinario1.png" class="card-img-top" alt="Dr. Edgar Pedraza" style="height: 380px; object-fit: cover;">
                     </div>
-                    <div class="card-body text-center p-4">
-                        <h3 class="h4 card-title text-success fw-bold mb-1">Dr. Edgar Pedraza</h3>
-                        <p class="text-success fw-medium small mb-3">Medicina Preventiva</p>
-                        <p class="card-text text-secondary small leading-relaxed">Especialista en cuidado preventivo y atención integral para perros y gatos con más de 3 años de experiencia brindando amor y salud.</p>
+                    <div class="card-body text-center p-4 d-flex flex-column justify-content-between flex-grow-1">
+                        <div>
+                            <h3 class="h4 card-title text-success fw-bold mb-1">Dr. Edgar Pedraza</h3>
+                            <p class="text-success fw-medium small mb-3">Medicina Preventiva</p>
+                            <p class="card-text text-secondary small leading-relaxed">Especialista en cuidado preventivo y atención integral para perros y gatos con más de 3 años de experiencia brindando amor y salud.</p>
+                        </div>
+                        <div class="mt-4">
+                            <button class="btn btn-outline-danger btn-sm w-100 btn-eliminar">Descartar Especialista</button>
+                        </div>
                     </div>
                 </div>
             </div>
 
+            <!-- Miembro 2 -->
             <div class="col-md-5">
-                <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden bg-white">
+                <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden bg-white d-flex flex-column">
                     <div class="overflow-hidden">
                         <img src="../images/veterinario2.png" class="card-img-top" alt="Dr. Thomas Cortez" style="height: 380px; object-fit: cover;">
                     </div>
-                    <div class="card-body text-center p-4">
-                        <h3 class="h4 card-title text-success fw-bold mb-1">Dr. Thomas Cortez</h3>
-                        <p class="text-success fw-medium small mb-3">Cirugía y Urgencias</p>
-                        <p class="card-text text-secondary small leading-relaxed">Cirujano apasionado por el soporte vital y la atención rápida ante cualquier emergencia médica veterinaria 24/7 con máxima dedicación.</p>
+                    <div class="card-body text-center p-4 d-flex flex-column justify-content-between flex-grow-1">
+                        <div>
+                            <h3 class="h4 card-title text-success fw-bold mb-1">Dr. Thomas Cortez</h3>
+                            <p class="text-success fw-medium small mb-3">Cirugía y Urgencias</p>
+                            <p class="card-text text-secondary small leading-relaxed">Cirujano apasionado por el soporte vital y la atención rápida ante cualquier emergencia médica veterinaria 24/7 con máxima dedicación.</p>
+                        </div>
+                        <div class="mt-4">
+                            <button class="btn btn-outline-danger btn-sm w-100 btn-eliminar">Descartar Especialista</button>
+                        </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </main>
 
+    <!-- Modal con el Formulario -->
+    <div class="modal fade" id="modalVeterinario" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title" id="modalLabel">Agregar Nuevo Especialista</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formVeterinario">
+                        <div class="mb-3">
+                            <label for="nombreVet" class="form-label">Nombre del Veterinario</label>
+                            <input type="text" class="form-control" id="nombreVet" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="especialidadVet" class="form-label">Especialidad</label>
+                            <input type="text" class="form-control" id="especialidadVet" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="imagenVet" class="form-label">Foto del Veterinario (Retrato)</label>
+                            <input type="file" class="form-control" id="imagenVet" accept="image/*" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="descripcionVet" class="form-label">Descripción o Experiencia</label>
+                            <textarea class="form-control" id="descripcionVet" rows="3" placeholder="Breve biografía..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">Guardar Veterinario</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
     <footer class="bg-dark text-white text-center py-3 mt-5">
         <p class="m-0">&copy; 2026 Animal Care. Todos los derechos reservados.</p>
     </footer>
 
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/app.js"></script>
 </body>
